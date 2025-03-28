@@ -8,7 +8,7 @@ PHP 8.2 required
 - `composer install`
 - `php artisan key:generate`
 - `php artisan jwt:secret`
-- Edit `.e nv` and set your database connection details
+- Edit `.env` and set your database connection details
 
 Node version 20 required 
 - `yarn`
