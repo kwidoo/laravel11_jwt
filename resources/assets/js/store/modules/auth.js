@@ -77,8 +77,11 @@ export const actions = {
 
   async fetchUser ({ commit }) {
     try {
-      const { data } = await axios.get('/api/user')
-
+      const { data } = await axios.get('/api/user', {
+        headers: {
+          Authorization: `Bearer ${state.token}`
+        }
+      })
       commit(types.FETCH_USER_SUCCESS, { user: data })
     } catch (e) {
       commit(types.FETCH_USER_FAILURE)
